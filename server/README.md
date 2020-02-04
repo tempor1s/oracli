@@ -12,6 +12,7 @@ Requirements:
 
 -   [Python 3](https://www.python.org/)
 -   [Pipenv](https://pipenv.kennethreitz.org/en/latest/)
+-   [MongoDB](https://www.mongodb.com/)
 
 Installation:
 
@@ -25,13 +26,42 @@ pipenv shell
 pipenv install
 ```
 
-Congrats! You should now have the Oracli backend installed and you are ready to begin development.
+Congrats! You should now have the Oracli backend installed.
 
-### Running the Project Locally
+### Getting Everyhing Setup
 
 If you have not yet followed the installation steps, go and do so before continuing.
 
+Now we need to make sure that you have MongoDB installed and running because it is required for the database and therefor the backend. (Docker will save us from this.)
+
+Check to see if you have MongoDB running:
+
+```bash
+# run the command
+mongod --version
+```
+
+If this returns output, you are good to go. If it says something along the lines of `Command not found` then you are going to need to install mongodb.
+
+Installing MongoDB on mac:
+
+```bash
+# install MongoDB using homebrew
+brew install mongodb-community
+# make sure that the service starts
+brew services start mongodb-community
+# check to make sure it installed correctly
+mongod --version
+```
+
+The last step is to rename `.env.example` to `.env`, and if everything went correctly then you are good to go!
+
+## Running
+
 ```bash
 # make sure you are in the correct repository and in a virtual environment, then run the following command
-python3 app.py
+python3 run.py
+# ensure that the server is working!
+curl http://0.0.0.0:5000
+# The above command should have responded with {"hello": "world"} :)
 ```

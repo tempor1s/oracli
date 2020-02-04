@@ -4,9 +4,9 @@ This repo contains the source code that connects mentors and mentees.
 
 ## 🚀 Getting Started
 
-### [Backend Code](./server/README.md)
+### [Backend Code](./server/)
 
-### [Mobile Code]('./mobile/README.md')
+### [Mobile Code]('./mobile/)
 
 ## Contibution Guidelines
 
