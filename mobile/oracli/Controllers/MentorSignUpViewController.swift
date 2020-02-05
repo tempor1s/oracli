@@ -22,4 +22,12 @@ class MentorSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let nc = self.navigationController {
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "MenteeListTVC") as! MenteeTableViewController
+            nc.pushViewController(nextVC, animated: true)
+        }
+    }
 }

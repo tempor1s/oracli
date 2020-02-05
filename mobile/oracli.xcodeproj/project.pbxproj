@@ -16,6 +16,7 @@
 		CF13E16D23E9FA7200750677 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E16C23E9FA7200750677 /* SignUpViewController.swift */; };
 		CF13E16F23E9FD0200750677 /* MenteeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */; };
 		CF13E17123E9FDB900750677 /* MentorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */; };
+		CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17223EB675E00750677 /* MenteeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CF13E16C23E9FA7200750677 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeSignUpViewController.swift; sourceTree = "<group>"; };
 		CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorSignUpViewController.swift; sourceTree = "<group>"; };
+		CF13E17223EB675E00750677 /* MenteeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				CF13E16C23E9FA7200750677 /* SignUpViewController.swift */,
 				CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */,
 				CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */,
+				CF13E17223EB675E00750677 /* MenteeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				CF13E16F23E9FD0200750677 /* MenteeSignUpViewController.swift in Sources */,
 				CF13E15623E91A7D00750677 /* AppDelegate.swift in Sources */,
 				CF13E16D23E9FA7200750677 /* SignUpViewController.swift in Sources */,
+				CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */,
 				CF13E15823E91A7D00750677 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
