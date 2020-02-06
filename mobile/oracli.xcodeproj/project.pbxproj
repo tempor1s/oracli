@@ -17,6 +17,7 @@
 		CF13E16F23E9FD0200750677 /* MenteeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */; };
 		CF13E17123E9FDB900750677 /* MentorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */; };
 		CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17223EB675E00750677 /* MenteeTableViewController.swift */; };
+		CF13E17523EB6BA700750677 /* MenteeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeSignUpViewController.swift; sourceTree = "<group>"; };
 		CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorSignUpViewController.swift; sourceTree = "<group>"; };
 		CF13E17223EB675E00750677 /* MenteeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeTableViewController.swift; sourceTree = "<group>"; };
+		CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		CF13E16B23E9FA4D00750677 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				CF13E16F23E9FD0200750677 /* MenteeSignUpViewController.swift in Sources */,
 				CF13E15623E91A7D00750677 /* AppDelegate.swift in Sources */,
 				CF13E16D23E9FA7200750677 /* SignUpViewController.swift in Sources */,
+				CF13E17523EB6BA700750677 /* MenteeTableViewCell.swift in Sources */,
 				CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */,
 				CF13E15823E91A7D00750677 /* SceneDelegate.swift in Sources */,
 			);
