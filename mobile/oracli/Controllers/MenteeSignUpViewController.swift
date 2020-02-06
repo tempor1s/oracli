@@ -11,6 +11,9 @@ import UIKit
 
 class MenteeSignUpViewController: UIViewController {
     
+    var name: String?
+    var age: String?
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -21,6 +24,8 @@ class MenteeSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = name
+        ageLabel.text = age
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

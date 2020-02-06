@@ -11,16 +11,20 @@ import UIKit
 
 class MentorSignUpViewController: UIViewController {
     
-
+    var name: String?
+    var age: String?
+    
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UIStackView!
-    @IBOutlet weak var ageLabel: UIStackView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var aboutTextView: UITextView!
     @IBOutlet weak var jobExperienceTextView: UITextView!
     @IBOutlet weak var skillsTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nameLabel.text = name
+        ageLabel.text = age
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

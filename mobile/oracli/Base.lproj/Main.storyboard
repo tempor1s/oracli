@@ -471,9 +471,9 @@
                     </view>
                     <connections>
                         <outlet property="aboutTextView" destination="L3l-3K-ri6" id="LpU-v2-ELY"/>
-                        <outlet property="ageLabel" destination="6ax-x3-xpv" id="fnr-5q-0MX"/>
+                        <outlet property="ageLabel" destination="fHd-AO-m3O" id="TJX-Tx-lB1"/>
                         <outlet property="jobExperienceTextView" destination="fB1-7j-93L" id="6iM-Gb-4DI"/>
-                        <outlet property="nameLabel" destination="6ax-x3-xpv" id="lea-nq-4M5"/>
+                        <outlet property="nameLabel" destination="1Th-ir-VzZ" id="kcZ-l0-aQn"/>
                         <outlet property="profileImageView" destination="1Ce-o2-N9M" id="1Va-km-du5"/>
                         <outlet property="skillsTextView" destination="B1v-eN-s6D" id="FVW-1g-1oc"/>
                     </connections>
