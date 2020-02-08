@@ -26,6 +26,6 @@ def token_required(f):
         except:
             return jsonify({'error': 'internal server error'})
 
-        return f(*args, kwargs)
+        return f(*args, **kwargs)
 
     return wrapper

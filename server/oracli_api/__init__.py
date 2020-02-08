@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from oracli_api.controllers.hello import HelloRoute
 from oracli_api.controllers.login import Login
 from oracli_api.controllers.register import Register
+from oracli_api.controllers.test import Test
 
 # load environment variables
 load_dotenv()
@@ -36,4 +37,4 @@ api.add_resource(Login, '/login')
 # Signup Route
 api.add_resource(Register, '/register')
 # test route
-# api.add_resource(Test, '/test')
+api.add_resource(Test, '/test')
