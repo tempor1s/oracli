@@ -9,4 +9,4 @@ import oracli_api
 class Test(Resource):
     @token_required
     def get(self, data, token):
-        return jsonify({'message': 'ur in chief :)'})
+        return jsonify({'message': f'you are in chief :) {data}'})

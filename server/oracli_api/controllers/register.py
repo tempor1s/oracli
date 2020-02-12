@@ -25,6 +25,7 @@ class Register(Resource):
         password = data.get('password')
 
         # TODO: Sanitize data :)
+        verify_email = None
         try:
             if is_mentor:
                 verify_email = oracli_api.mentors.find_one({'email': email})
@@ -32,15 +33,12 @@ class Register(Resource):
                 verify_email = oracli_api.mentees.find_one({'email': email})
         except Exception as e:
             print(e)
-        print('verify email', verify_email)
         # if the user is not in the DB
         if verify_email is None:
             # TODO: Hash password
             # this creates either a Mentor or a Mentee depending on the returned data
             current_user = Mentor(name, age, gender, email, password) if is_mentor else Mentee(
                 name, age, gender, email, password)
-
-            print(current_user)
 
             current_user.save_new()  # create the new user
 

@@ -20,7 +20,9 @@ api = Api(app)
 app.config.from_object(os.getenv('APP_SETTINGS'))
 # mongodb stuff
 try:
+    # client = MongoClient(os.getenv('DATABASE_URL'))
     client = MongoClient(host=os.getenv('DATABASE_URL'))
+
     db = client.get_default_database()
 
     mentors = db.mentors
