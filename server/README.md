@@ -4,15 +4,13 @@ Oracli Backend contains all the code that runs the API as well as the basic land
 
 ## 🚀 Getting Started
 
-### Installation and Requirements
+### Installation & Running
 
-Currently, we only require that you have Python3 or Pipenv installed, but in the future the application will be dockerized for easy deployment and development work.
+All you need is Docker installed and running on your local machine.
 
 Requirements:
 
--   [Python 3](https://www.python.org/)
--   [Pipenv](https://pipenv.kennethreitz.org/en/latest/)
--   [MongoDB](https://www.mongodb.com/)
+-   [Docker](https://www.docker.com/)
 
 Installation:
 
@@ -21,47 +19,33 @@ Installation:
 git clone https://github.com/tempor1s/oracli
 # change directory
 cd oracli/server
-# create a virtual enviornment and install packages
-pipenv shell
-pipenv install
 ```
 
-Congrats! You should now have the Oracli backend installed.
+Next, we need to configure environment variables.
 
-### Getting Everyhing Setup
+First, rename `.env.example` to `.env`
 
-If you have not yet followed the installation steps, go and do so before continuing.
-
-Now we need to make sure that you have MongoDB installed and running because it is required for the database and therefor the backend. (Docker will save us from this.)
-
-Check to see if you have MongoDB running:
+Then, modify the SECRET_KEY in the `.env` file to be whatever you want. It should look like below when you are done.
 
 ```bash
-# run the command
-mongod --version
+DATABASE_URL=mongodb://db:27017/oracli
+APP_SETTINGS=config.ProductionConfig
+SECRET_KEY=changethislocally
 ```
 
-If this returns output, you are good to go. If it says something along the lines of `Command not found` then you are going to need to install mongodb.
-
-Installing MongoDB on mac:
+From here, it is as simple as running one command and everything should be up and running!
 
 ```bash
-# install MongoDB using homebrew
-brew install mongodb-community
-# make sure that the service starts
-brew services start mongodb-community
-# check to make sure it installed correctly
-mongod --version
+# check to make sure docker is running if you want
+docker info
+# run everything in a container :)
+docker-compose up --build
 ```
 
-The last step is to rename `.env.example` to `.env`, and if everything went correctly then you are good to go!
-
-## Running
+Everything should be now running. To ensure that, you can run a simple ping to
 
 ```bash
-# make sure you are in the correct repository and in a virtual environment, then run the following command
-python3 run.py
 # ensure that the server is working!
-curl http://0.0.0.0:5000
+curl http://localhost:5000
 # The above command should have responded with {"hello": "world"} :)
 ```
