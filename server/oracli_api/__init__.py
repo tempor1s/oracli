@@ -20,7 +20,8 @@ api = Api(app)
 app.config.from_object(os.getenv('APP_SETTINGS'))
 # mongodb stuff
 try:
-    client = MongoClient(host=os.getenv('DATABASE_URL'))
+    client = MongoClient(host=os.getenv('DATABASE_URL'), username=os.getenv(
+        'MONGO_INITDB_ROOT_USERNAME', None),  password=('MONGO_INITDB_ROOT_PASSWORD', None))
 
     db = client.get_default_database()
 
