@@ -42,7 +42,7 @@ docker info
 docker-compose up --build
 ```
 
-Everything should be now running. To ensure that, you can run a simple ping to
+Everything should be now running. To ensure that, you can run a simple ping to `http://localhost:5000`
 
 ```bash
 # ensure that the server is working!
