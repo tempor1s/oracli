@@ -20,6 +20,7 @@
 		CF13E17523EB6BA700750677 /* MenteeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */; };
 		CF13E17823EE74BE00750677 /* Mentee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17723EE74BE00750677 /* Mentee.swift */; };
 		CF13E17B23EE814B00750677 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17A23EE814B00750677 /* Mentor.swift */; };
+		CF1A949423F89B37000E9EA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A949323F89B37000E9EA8 /* User.swift */; };
 		CF4ECB2923F1E52F0087627B /* MenteeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */; };
 		CF4ECB2B23F1E5D10087627B /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeTableViewCell.swift; sourceTree = "<group>"; };
 		CF13E17723EE74BE00750677 /* Mentee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentee.swift; sourceTree = "<group>"; };
 		CF13E17A23EE814B00750677 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		CF1A949323F89B37000E9EA8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeDetailViewController.swift; sourceTree = "<group>"; };
 		CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 			children = (
 				CF13E17723EE74BE00750677 /* Mentee.swift */,
 				CF13E17A23EE814B00750677 /* Mentor.swift */,
+				CF1A949323F89B37000E9EA8 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1A949423F89B37000E9EA8 /* User.swift in Sources */,
 				CF13E17123E9FDB900750677 /* MentorSignUpViewController.swift in Sources */,
 				CF13E15A23E91A7D00750677 /* ViewController.swift in Sources */,
 				CF13E17823EE74BE00750677 /* Mentee.swift in Sources */,

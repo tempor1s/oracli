@@ -27,6 +27,7 @@ class MenteeSignUpViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = name
         ageLabel.text = age
+        navigationController?.navigationItem.backBarButtonItem?.title = "Logout"
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

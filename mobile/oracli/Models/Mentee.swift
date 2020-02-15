@@ -17,12 +17,5 @@ struct Mentee {
     let whyMentor: String
     let about: String
     let matched: Bool
-    
-//    init(json: JSON) {
-//        self.title = json["title"].stringValue
-//        self.author = json["author"].stringValue
-//        self.imageURL = json["book_image"].stringValue
-//        self.description = json["description"].stringValue
-//        self.amazonURL = json["amazon_product_url"].stringValue
-//    }
+ 
 }

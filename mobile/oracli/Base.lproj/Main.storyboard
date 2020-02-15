@@ -686,15 +686,6 @@
                                     <constraint firstAttribute="height" constant="80" id="G8E-I2-ybE"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcJ-hk-bfW">
-                                <rect key="frame" x="0.0" y="823" width="414" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Select mentee"/>
-                                <connections>
-                                    <action selector="selectMenteeTapped:" destination="gJX-4H-wbD" eventType="touchUpInside" id="iA5-To-sA3"/>
-                                    <action selector="selectMenteeTapped:" destination="1XS-gH-MqE" eventType="touchUpInside" id="oSk-4M-2vD"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Areas of interest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1k-Dl-kKS">
                                 <rect key="frame" x="20" y="594" width="374" height="130"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -731,16 +722,13 @@
                             <constraint firstItem="aMb-Ff-HgF" firstAttribute="top" secondItem="rgU-F5-8fe" secondAttribute="bottom" constant="60" id="3lE-Fs-CIu"/>
                             <constraint firstItem="s1k-Dl-kKS" firstAttribute="leading" secondItem="6cd-xp-Hlh" secondAttribute="leading" constant="20" id="4UB-fC-S66"/>
                             <constraint firstItem="hS1-ME-ezJ" firstAttribute="top" secondItem="aMb-Ff-HgF" secondAttribute="bottom" constant="40" id="5nE-oM-eMp"/>
-                            <constraint firstItem="xcJ-hk-bfW" firstAttribute="leading" secondItem="6cd-xp-Hlh" secondAttribute="leading" id="BG3-k2-d8h"/>
                             <constraint firstItem="6cd-xp-Hlh" firstAttribute="trailing" secondItem="aMb-Ff-HgF" secondAttribute="trailing" constant="20" id="GzY-9i-dfj"/>
                             <constraint firstItem="rgU-F5-8fe" firstAttribute="leading" secondItem="6cd-xp-Hlh" secondAttribute="leading" constant="20" id="Nuf-TG-sQ4"/>
                             <constraint firstItem="6cd-xp-Hlh" firstAttribute="trailing" secondItem="hS1-ME-ezJ" secondAttribute="trailing" constant="20" id="OKv-Ef-vVj"/>
                             <constraint firstItem="6cd-xp-Hlh" firstAttribute="trailing" secondItem="s1k-Dl-kKS" secondAttribute="trailing" constant="20" id="Su0-Xa-rgb"/>
                             <constraint firstItem="ps6-9m-KHW" firstAttribute="leading" secondItem="rgU-F5-8fe" secondAttribute="trailing" constant="30" id="YDy-79-Nno"/>
-                            <constraint firstItem="6cd-xp-Hlh" firstAttribute="trailing" secondItem="xcJ-hk-bfW" secondAttribute="trailing" id="Yad-oS-5XG"/>
                             <constraint firstItem="ps6-9m-KHW" firstAttribute="top" secondItem="6cd-xp-Hlh" secondAttribute="top" constant="30" id="bSu-eO-O9P"/>
                             <constraint firstItem="6cd-xp-Hlh" firstAttribute="trailing" secondItem="ps6-9m-KHW" secondAttribute="trailing" constant="20" id="f59-hK-bKc"/>
-                            <constraint firstItem="6cd-xp-Hlh" firstAttribute="bottom" secondItem="xcJ-hk-bfW" secondAttribute="bottom" id="hah-HZ-iok"/>
                             <constraint firstItem="rgU-F5-8fe" firstAttribute="top" secondItem="6cd-xp-Hlh" secondAttribute="top" constant="20" id="k0k-Uj-E3a"/>
                             <constraint firstItem="s1k-Dl-kKS" firstAttribute="top" secondItem="hS1-ME-ezJ" secondAttribute="bottom" constant="40" id="qq7-yI-cCr"/>
                             <constraint firstItem="aMb-Ff-HgF" firstAttribute="leading" secondItem="6cd-xp-Hlh" secondAttribute="leading" constant="20" id="xQC-Gv-Lg1"/>
@@ -751,7 +739,6 @@
                     <navigationItem key="navigationItem" id="6LX-d9-8lP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGh-5X-Lqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="gJX-4H-wbD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3081" y="138"/>
         </scene>
