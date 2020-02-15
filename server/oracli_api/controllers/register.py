@@ -35,10 +35,12 @@ class Register(Resource):
             print(e)
         # if the user is not in the DB
         if verify_email is None:
-            # TODO: Hash password
+            salt = bcrypt.gensalt(rounds=14)
+            hashed_pw = bcrypt.hashpw(password.encode('utf-8'), salt)
+
             # this creates either a Mentor or a Mentee depending on the returned data
-            current_user = Mentor(name, age, gender, email, password) if is_mentor else Mentee(
-                name, age, gender, email, password)
+            current_user = Mentor(name, age, gender, email, hashed_pw) if is_mentor else Mentee(
+                name, age, gender, email, hashed_pw)
 
             current_user.save_new()  # create the new user
 

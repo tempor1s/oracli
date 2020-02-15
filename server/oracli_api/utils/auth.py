@@ -20,7 +20,6 @@ def token_required(f):
                 return jsonify({'message': 'auth token is missing'})
         try:
             data = jwt.decode(token, os.getenv('SECRET_KEY'))
-            # very hacky
             kwargs['data'] = data
             kwargs['token'] = token
         except:

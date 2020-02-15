@@ -27,8 +27,11 @@ class Login(Resource):
         if verify_user is None:
             return jsonify({'message': 'user not found.'})
 
-        # generate a jwt token
-        token = jwt.encode({'_id': str(verify_user.get('_id')), 'exp': datetime.datetime.utcnow(
-        ) + datetime.timedelta(days=30)}, os.getenv('SECRET_KEY'))
-        # return the token
-        return jsonify({'token': token.decode('UTF-8')})
+        if bcrypt.checkpw(password.encode('utf-8'), verify_user.get('password')):
+            # generate a jwt token
+            token = jwt.encode({'_id': str(verify_user.get('_id')), 'exp': datetime.datetime.utcnow(
+            ) + datetime.timedelta(days=30)}, os.getenv('SECRET_KEY'))
+            # return the token
+            return jsonify({'token': token.decode('UTF-8')})
+        else:
+            return jsonify({'message': 'Incorrect password.'})
