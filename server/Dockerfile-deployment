@@ -7,4 +7,4 @@ COPY . /app
 RUN pip install --no-cache-dir -r ./server/requirements.txt
 
 EXPOSE 5000
-CMD [ "gunicorn", "--chdir", "./server", "-w", "4", "run:app"]
+CMD [ "gunicorn", "--chdir", "./server", "-w", "4", "-b", "0.0.0.0:5000", "run:app"]
