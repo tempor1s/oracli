@@ -4,6 +4,7 @@ from flask import jsonify, make_response, request
 from flask_restful import Resource
 import bcrypt
 import jwt
+import os
 
 import oracli_api
 from oracli_api.utils.auth import token_required
@@ -34,16 +35,27 @@ class Register(Resource):
         except Exception as e:
             print(e)
         # if the user is not in the DB
-        if verify_email is None:
-            salt = bcrypt.gensalt(rounds=14)
-            hashed_pw = bcrypt.hashpw(password.encode('utf-8'), salt)
-
-            # this creates either a Mentor or a Mentee depending on the returned data
-            current_user = Mentor(name, age, gender, email, hashed_pw) if is_mentor else Mentee(
-                name, age, gender, email, hashed_pw)
-
-            current_user.save_new()  # create the new user
-
-            return jsonify({'success': 'user has been created in the database'})
-        else:
+        if verify_email is not None:
             return jsonify({'message': 'account already exists with ' + str(email)})
+
+        # salt and hash the pw
+        salt = bcrypt.gensalt(rounds=12)
+        hashed_pw = bcrypt.hashpw(password.encode('utf-8'), salt)
+
+        # this creates either a Mentor or a Mentee depending on the returned data
+        current_user = Mentor(name, age, gender, email, hashed_pw) if is_mentor else Mentee(
+            name, age, gender, email, hashed_pw)
+
+        current_user.save_new()  # create the new user
+
+        # get the new user
+        new_user = oracli_api.mentees.find_one({'email': email})
+        if new_user is None:
+            new_user = oracli_api.mentors.find_one({'email': email})
+
+        # generate a jwt token for the new user
+        token = jwt.encode({'_id': str(new_user.get('_id')), 'exp': datetime.datetime.utcnow(
+        ) + datetime.timedelta(days=30)}, os.getenv('SECRET_KEY'))
+
+        # return the token
+        return jsonify({'token': token.decode('UTF-8')})

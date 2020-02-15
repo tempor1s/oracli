@@ -11,7 +11,7 @@ def token_required(f):
     @wraps(f)
     def wrapper(*args, **kwargs):
         try:
-            token = request.get_json().get('token')
+            token = request.headers.get('Auth')
         except Exception as e:
             print(e)
             token = None
