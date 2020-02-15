@@ -14,7 +14,7 @@ class Login(Resource):
         # store json
         headers = request.headers
         credentials = request.get_json()
-        print('credentials', credentials)
+        # get credentials from post request
         email = credentials.get('email')
         password = credentials.get('password')
 
