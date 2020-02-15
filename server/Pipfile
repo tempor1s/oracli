@@ -13,6 +13,7 @@ pymongo = "*"
 python-dotenv = "*"
 bcrypt = "*"
 pyjwt = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
