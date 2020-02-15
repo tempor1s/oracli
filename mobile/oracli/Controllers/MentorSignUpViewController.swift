@@ -13,6 +13,7 @@ class MentorSignUpViewController: UIViewController {
     
     var name: String?
     var age: String?
+    var gender: String?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -25,6 +26,7 @@ class MentorSignUpViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = name
         ageLabel.text = age
+        
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

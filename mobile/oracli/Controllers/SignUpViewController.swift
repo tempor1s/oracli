@@ -14,12 +14,17 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var mentorSegmentedControl: UISegmentedControl!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Register"
+        self.navigationItem.leftBarButtonItem?.title = ""
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {
@@ -30,6 +35,9 @@ class SignUpViewController: UIViewController {
             return
         }
         guard let email = emailTextField.text else {
+            return
+        }
+        guard let gender = genderTextField.text else {
             return
         }
         guard let password = passwordTextField.text else {

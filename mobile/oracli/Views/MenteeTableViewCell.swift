@@ -11,14 +11,24 @@ import UIKit
 
 class MenteeTableViewCell: UITableViewCell {
     
-    let nameLabel = makeLabel(withText: "Name")
-    let areasOfInterestLabel = makeLabel(withText: "Areas of Interest")
+    let nameLabel = makeLabel()
+    let areasOfInterestLabel = makeLabel()
+    var matched: Bool = false
     
-    private static func makeLabel(withText: String) -> UILabel {
+    private static func makeLabel() -> UILabel {
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = withText
+        
+        label.numberOfLines = 0
+        return label
+    }
+    
+    private static func makeLabelWithText(text: String) -> UILabel {
+        let label = UILabel()
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = text
         
         label.numberOfLines = 0
         return label

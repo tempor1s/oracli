@@ -18,6 +18,10 @@
 		CF13E17123E9FDB900750677 /* MentorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */; };
 		CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17223EB675E00750677 /* MenteeTableViewController.swift */; };
 		CF13E17523EB6BA700750677 /* MenteeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */; };
+		CF13E17823EE74BE00750677 /* Mentee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17723EE74BE00750677 /* Mentee.swift */; };
+		CF13E17B23EE814B00750677 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17A23EE814B00750677 /* Mentor.swift */; };
+		CF4ECB2923F1E52F0087627B /* MenteeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */; };
+		CF4ECB2B23F1E5D10087627B /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorSignUpViewController.swift; sourceTree = "<group>"; };
 		CF13E17223EB675E00750677 /* MenteeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeTableViewController.swift; sourceTree = "<group>"; };
 		CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeTableViewCell.swift; sourceTree = "<group>"; };
+		CF13E17723EE74BE00750677 /* Mentee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentee.swift; sourceTree = "<group>"; };
+		CF13E17A23EE814B00750677 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeDetailViewController.swift; sourceTree = "<group>"; };
+		CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,7 @@
 		CF13E15423E91A7D00750677 /* oracli */ = {
 			isa = PBXGroup;
 			children = (
+				CF13E17923EE812B00750677 /* Models */,
 				CF13E16B23E9FA4D00750677 /* Views */,
 				CF13E16A23E9FA4400750677 /* Controllers */,
 				CF13E15523E91A7D00750677 /* AppDelegate.swift */,
@@ -86,6 +95,8 @@
 				CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */,
 				CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */,
 				CF13E17223EB675E00750677 /* MenteeTableViewController.swift */,
+				CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */,
+				CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -96,6 +107,15 @@
 				CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CF13E17923EE812B00750677 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF13E17723EE74BE00750677 /* Mentee.swift */,
+				CF13E17A23EE814B00750677 /* Mentor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,12 +191,16 @@
 			files = (
 				CF13E17123E9FDB900750677 /* MentorSignUpViewController.swift in Sources */,
 				CF13E15A23E91A7D00750677 /* ViewController.swift in Sources */,
+				CF13E17823EE74BE00750677 /* Mentee.swift in Sources */,
 				CF13E16F23E9FD0200750677 /* MenteeSignUpViewController.swift in Sources */,
+				CF13E17B23EE814B00750677 /* Mentor.swift in Sources */,
 				CF13E15623E91A7D00750677 /* AppDelegate.swift in Sources */,
 				CF13E16D23E9FA7200750677 /* SignUpViewController.swift in Sources */,
 				CF13E17523EB6BA700750677 /* MenteeTableViewCell.swift in Sources */,
+				CF4ECB2B23F1E5D10087627B /* WaitingViewController.swift in Sources */,
 				CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */,
 				CF13E15823E91A7D00750677 /* SceneDelegate.swift in Sources */,
+				CF4ECB2923F1E52F0087627B /* MenteeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
