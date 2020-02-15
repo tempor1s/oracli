@@ -20,7 +20,8 @@ api = Api(app)
 app.config.from_object(os.getenv('APP_SETTINGS'))
 # mongodb stuff
 try:
-    client = MongoClient(host=f'{os.getenv('DATABASE_URL')}?authSource=admin')
+    host = os.environ.get('DATABASE_URL', 'mongodb://db:27017/oracli')
+    client = MongoClient(host=f'{host}?authSource=admin')
 
     db = client.get_default_database()
 
