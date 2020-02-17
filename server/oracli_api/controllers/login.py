@@ -11,22 +11,20 @@ import oracli_api
 
 class Login(Resource):
     def post(self):
-        # store json
-        headers = request.headers
+        # posted login credentials
         credentials = request.get_json()
         # get credentials from post request
         email = credentials.get('email')
         password = credentials.get('password')
 
         # check to see if the user is a mentee
-        verify_user = oracli_api.mentees.find_one({'email': email})
-        if verify_user is None:
-            verify_user = oracli_api.mentors.find_one({'email': email})
+        verify_user = oracli_api.users.find_one({'email': email})
 
         # the user does not exist in either database, so tell the client
         if verify_user is None:
-            return jsonify({'message': 'user not found.'})
+            return jsonify({'message': 'user not found'})
 
+        # encrpt given password and check it against one stored in the db
         if bcrypt.checkpw(password.encode('utf-8'), verify_user.get('password')):
             # generate a jwt token
             token = jwt.encode({'_id': str(verify_user.get('_id')), 'exp': datetime.datetime.utcnow(

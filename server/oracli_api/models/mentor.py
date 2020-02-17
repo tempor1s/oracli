@@ -28,4 +28,4 @@ class Mentor(user.User):
         }
 
     def save_new(self):
-        oracli_api.mentors.insert_one(self.serialize())
+        oracli_api.users.insert_one(self.serialize())
