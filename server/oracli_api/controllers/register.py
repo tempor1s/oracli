@@ -13,7 +13,6 @@ from oracli_api.models.mentor import Mentor
 
 
 class Register(Resource):
-    # TODO: Login the user after they are created
     def post(self):
         data = request.get_json()
 
@@ -46,7 +45,8 @@ class Register(Resource):
         current_user = Mentor(name, age, gender, email, hashed_pw) if is_mentor else Mentee(
             name, age, gender, email, hashed_pw)
 
-        current_user.save_new()  # create the new user
+        # insert the user into the database
+        current_user.save_new()
 
         # get the new user
         new_user = oracli_api.mentees.find_one({'email': email})

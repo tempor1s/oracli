@@ -1,7 +1,5 @@
 from oracli_api.models import user
 
-import uuid
-
 import oracli_api
 
 

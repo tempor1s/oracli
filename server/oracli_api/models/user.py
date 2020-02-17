@@ -10,7 +10,7 @@ class User(object):
         self.name = name
         self.age = age
         self.is_mentor = None
-        self.gender = None
+        self.gender = ""
         self.email = email
         self.password = password
         self.about_you = ""
