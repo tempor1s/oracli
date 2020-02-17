@@ -9,7 +9,7 @@ from oracli_api.controllers.hello import HelloRoute
 from oracli_api.controllers.login import Login
 from oracli_api.controllers.register import Register
 from oracli_api.controllers.test import Test
-from oracli_api.controllers.user import User
+from oracli_api.controllers.user import User, Matched
 from oracli_api.controllers.mentees import Mentees
 from oracli_api.controllers.mentors import Mentors
 
@@ -44,6 +44,8 @@ api.add_resource(Register, '/register')
 api.add_resource(Test, '/test')
 # user route
 api.add_resource(User, '/user')
+# route to check to make sure a user is matched
+api.add_resource(Matched, '/user/matched')
 # mentors route
 api.add_resource(Mentors, '/mentors')
 # mentees route

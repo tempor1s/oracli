@@ -48,3 +48,20 @@ class User(Resource):
             return jsonify({'message': 'user does not exist'})
 
         return jsonify({'message': 'success', 'deleted_user': json.loads(json_util.dumps(user))})
+
+
+class Matched(Resource):
+    @token_required
+    def get(self, data, token):
+        # get user id from data
+        user_id = {'_id': ObjectId(data.get('_id'))}
+        # get all mentors from db and return them
+        user = oracli_api.users.find_one(user_id)
+
+        if user.get('is_mentor') == True:
+            return jsonify({'message': 'can not get matched for a mentor'})
+
+        if user.get('mentor') == None:
+            return jsonify({'matched': False})
+        else:
+            return jsonify({'matched': True})
