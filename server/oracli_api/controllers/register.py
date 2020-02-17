@@ -24,15 +24,8 @@ class Register(Resource):
         email = data.get('email')
         password = data.get('password')
 
-        # TODO: Sanitize data :)
-        verify_email = None
-        try:
-            if is_mentor:
-                verify_email = oracli_api.mentors.find_one({'email': email})
-            else:
-                verify_email = oracli_api.mentees.find_one({'email': email})
-        except Exception as e:
-            print(e)
+        # try to find if the user already exists in the db
+        verify_email = oracli_api.users.find_one({'email': email})
         # if the user is not in the DB
         if verify_email is not None:
             return jsonify({'message': 'account already exists with ' + str(email)})
@@ -49,9 +42,7 @@ class Register(Resource):
         current_user.save_new()
 
         # get the new user
-        new_user = oracli_api.mentees.find_one({'email': email})
-        if new_user is None:
-            new_user = oracli_api.mentors.find_one({'email': email})
+        new_user = oracli_api.users.find_one({'email': email})
 
         # generate a jwt token for the new user
         token = jwt.encode({'_id': str(new_user.get('_id')), 'exp': datetime.datetime.utcnow(

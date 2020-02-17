@@ -28,8 +28,7 @@ try:
 
     db = client.get_default_database()
 
-    mentors = db.mentors
-    mentees = db.mentees
+    users = db.users
 except Exception as e:
     print(e)
 

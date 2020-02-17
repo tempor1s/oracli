@@ -12,5 +12,5 @@ class Mentees(Resource):
     @token_required
     def get(self, data, token):
         # get all mentees from db and return them
-        mentees = list(oracli_api.mentees.find({}))
+        mentees = list(oracli_api.users.find({"is_mentor": False}))
         return jsonify(json.loads(json_util.dumps(mentees)))
