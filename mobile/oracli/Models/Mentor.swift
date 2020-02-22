@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Mentor {
+struct Mentor:Codable {
 
     let name: String
     let age: Int

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Mentee {
+struct Mentee:Codable {
     
     let name: String
     let age: Int
