@@ -11,9 +11,7 @@ import UIKit
 
 class MenteeSignUpViewController: UIViewController {
     
-    var name: String?
-    var age: String?
-    var gender: String?
+    var token: String?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -25,9 +23,7 @@ class MenteeSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name
-        ageLabel.text = age
-        navigationController?.navigationItem.backBarButtonItem?.title = "Logout"
+        
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

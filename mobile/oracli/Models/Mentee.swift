@@ -17,5 +17,6 @@ struct Mentee:Codable {
     let whyMentor: String
     let about: String
     let matched: Bool
+    let token: String
  
 }

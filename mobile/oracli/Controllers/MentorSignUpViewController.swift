@@ -11,9 +11,7 @@ import UIKit
 
 class MentorSignUpViewController: UIViewController {
     
-    var name: String?
-    var age: String?
-    var gender: String?
+    var token: String?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,8 +22,6 @@ class MentorSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = name
-        ageLabel.text = age
         
     }
     

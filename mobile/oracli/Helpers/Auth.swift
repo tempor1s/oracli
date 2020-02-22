@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-func createUser(user: User) {
+func createUser(user: User) -> String {
+    var token: String = ""
     let url = URL(string: "https://oracli.dev.benlafferty.me/register")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    guard let uploadData = try? JSONEncoder().encode(user) else { return }
+    guard let uploadData = try? JSONEncoder().encode(user) else { return "Can't encode user as JSON" }
 
     let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
         if let error = error {
@@ -28,12 +29,18 @@ func createUser(user: User) {
         }
         if let mimeType = response.mimeType,
             mimeType == "application/json",
-            let data = data,
-            let dataString = String(data: data, encoding: .utf8) {
-            print ("got data: \(dataString)")
+            let data = data {
+            guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else{return}
+            if let dictionary = json as? [String:String] {
+                if let value = dictionary["token"] {
+                    token = value
+                }
+            }
+            print ("got token: \(token)")
         }
     }
     task.resume()
+    return token
 }
 
 func updateUser(userID: String, fieldToUpdate: String, update: Any) {
@@ -41,4 +48,12 @@ func updateUser(userID: String, fieldToUpdate: String, update: Any) {
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue(userID, forHTTPHeaderField: "Auth")
+}
+
+func getUser(token: String) -> String {
+     return "User"
+}
+
+func allMentees() -> [String] {
+    return ["mentee", "mentee"]
 }

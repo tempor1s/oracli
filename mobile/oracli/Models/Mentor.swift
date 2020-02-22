@@ -16,5 +16,6 @@ struct Mentor:Codable {
     let about: String
     let jobExperience: String
     let areasOfInterest: String
+    let token: String
     
 }
