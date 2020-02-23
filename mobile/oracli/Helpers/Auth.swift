@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-func createUser(user: User) {
-    let url = URL(string: "https://oracli.dev.benlafferty.me/register")!    //flask api url
-    var request = URLRequest(url: url)  //creating url request
-    request.httpMethod = "POST"         //determines the type of url request
+func createUser(user: User) -> String {
+    var token: String = ""
+    let url = URL(string: "https://oracli.dev.benlafferty.me/register")!
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-    //atempts to encode the user data to JSON, throws an error into an optional if unsuccessful and ends the function
-    guard let uploadData = try? JSONEncoder().encode(user) else { return }
     
-    //sends the post request to server and gets back error and server response
+    guard let uploadData = try? JSONEncoder().encode(user) else { return "Can't encode user as JSON" }
+
     let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
         if let error = error {
             print ("error: \(error)")
@@ -32,17 +32,95 @@ func createUser(user: User) {
         //handles data you recieve from the server
         if let mimeType = response.mimeType,
             mimeType == "application/json",
-            let data = data,
-            let dataString = String(data: data, encoding: .utf8) {
-            print ("got data: \(dataString)")
+            let data = data {
+            guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
+            if let dictionary = json as? [String:String] {
+                if let value = dictionary["token"] {
+                    token = value
+                }
+            }
+            print ("got token: \(token)")
         }
     }
     task.resume()
+    return token
 }
 
-func updateUser(userID: String, fieldToUpdate: String, update: Any) {
-    let url = URL(string: "https://oracli.dev.benlafferty.me/user")!
+func login(login: Login) -> String {
+    var returnValue: String = "1"
+    let url = URL(string: "https://oracli.dev.benlafferty.me/login")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
-    request.setValue(userID, forHTTPHeaderField: "Auth")
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    
+    guard let loginData = try? JSONEncoder().encode(login) else { return "can't encode login" }
+    let task = URLSession.shared.uploadTask(with: request, from: loginData) { data, response, error in
+        if let error = error {
+            print ("error: \(error)")
+            return
+        }
+        guard let response = response as? HTTPURLResponse,
+            (200...299).contains(response.statusCode) else {
+            print ("server error")
+            return
+        }
+        if let mimeType = response.mimeType,
+            mimeType == "application/json",
+            let data = data {
+            guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
+                returnValue = "couldn't serialize json"
+                return
+            }
+            if let dictionary = json as? [String:String] {
+                if let message = dictionary["message"] {
+                    returnValue = message
+                } else {
+                    returnValue = "it worked dumb bitch"
+                }
+            }
+        }
+    }
+    task.resume()
+    return returnValue
+}
+
+//func updateUser(update: Update) {
+//    let url = URL(string: "https://oracli.dev.benlafferty.me/user")!
+//    var request = URLRequest(url: url)
+//    request.httpMethod = "POST"
+//    request.setValue(userID, forHTTPHeaderField: "Auth")
+//
+//    guard let uploadData = try? JSONEncoder().encode(update) else { return }
+//
+//    let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
+//        if let error = error {
+//            print ("error: \(error)")
+//            return
+//        }
+//        guard let response = response as? HTTPURLResponse,
+//            (200...299).contains(response.statusCode) else {
+//            print ("server error")
+//            return
+//        }
+//        if let mimeType = response.mimeType,
+//            mimeType == "application/json",
+//            let data = data {
+//            guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
+//            if let dictionary = json as? [String:String] {
+//                if let value = dictionary["token"] {
+//                    token = value
+//                }
+//            }
+//            print ("got token: \(token)")
+//        }
+//    }
+//    task.resume()
+//}
+
+func getUser(token: String) -> String {
+     return "User"
+}
+
+func allMentees() -> [String] {
+    return ["mentee", "mentee"]
 }
