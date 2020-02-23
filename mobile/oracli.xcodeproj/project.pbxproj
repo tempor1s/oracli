@@ -24,6 +24,8 @@
 		CF1A949723FB226E000E9EA8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A949623FB226E000E9EA8 /* Auth.swift */; };
 		CF4ECB2923F1E52F0087627B /* MenteeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */; };
 		CF4ECB2B23F1E5D10087627B /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */; };
+		CF625B2B240336EE006D281D /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF625B2A240336EE006D281D /* Codable.swift */; };
+		CF625B2D24033FC7006D281D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF625B2C24033FC7006D281D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		CF1A949623FB226E000E9EA8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeDetailViewController.swift; sourceTree = "<group>"; };
 		CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
+		CF625B2A240336EE006D281D /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		CF625B2C24033FC7006D281D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				CF13E17223EB675E00750677 /* MenteeTableViewController.swift */,
 				CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */,
 				CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */,
+				CF625B2C24033FC7006D281D /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 				CF13E17723EE74BE00750677 /* Mentee.swift */,
 				CF13E17A23EE814B00750677 /* Mentor.swift */,
 				CF1A949323F89B37000E9EA8 /* User.swift */,
+				CF625B2A240336EE006D281D /* Codable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,9 +217,11 @@
 				CF13E17B23EE814B00750677 /* Mentor.swift in Sources */,
 				CF13E15623E91A7D00750677 /* AppDelegate.swift in Sources */,
 				CF13E16D23E9FA7200750677 /* SignUpViewController.swift in Sources */,
+				CF625B2B240336EE006D281D /* Codable.swift in Sources */,
 				CF13E17523EB6BA700750677 /* MenteeTableViewCell.swift in Sources */,
 				CF4ECB2B23F1E5D10087627B /* WaitingViewController.swift in Sources */,
 				CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */,
+				CF625B2D24033FC7006D281D /* LoginViewController.swift in Sources */,
 				CF1A949723FB226E000E9EA8 /* Auth.swift in Sources */,
 				CF13E15823E91A7D00750677 /* SceneDelegate.swift in Sources */,
 				CF4ECB2923F1E52F0087627B /* MenteeDetailViewController.swift in Sources */,
