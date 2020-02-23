@@ -1,7 +1,6 @@
 from flask import jsonify, make_response, request
 from flask_restful import Resource
-from bson import json_util
-from bson import ObjectId
+from bson import json_util, ObjectId
 import json
 from pymongo import ReturnDocument
 
@@ -18,7 +17,7 @@ class User(Resource):
         user_id = {'_id': ObjectId(data.get('_id'))}
         # get the user from the db
         user = oracli_api.users.find_one(user_id)
-
+        # return the user
         return jsonify(json.loads(json_util.dumps(user)))
 
     @token_required
@@ -35,7 +34,7 @@ class User(Resource):
             return jsonify({'message': 'user does not exist'})
 
         # user update was successful, so we can return success message and the updated user
-        return jsonify({'message': 'success', 'updated_user': json.loads(json_util.dumps(updated_user))})
+        return jsonify({'message': 'Success :)', 'updated_user': json.loads(json_util.dumps(updated_user))})
 
     @token_required
     def delete(self, data, token):
@@ -47,7 +46,7 @@ class User(Resource):
         if user is None:
             return jsonify({'message': 'user does not exist'})
 
-        return jsonify({'message': 'success', 'deleted_user': json.loads(json_util.dumps(user))})
+        return jsonify({'message': 'Success :)', 'deleted_user': json.loads(json_util.dumps(user))})
 
 
 class Matched(Resource):
@@ -58,10 +57,17 @@ class Matched(Resource):
         # get all mentors from db and return them
         user = oracli_api.users.find_one(user_id)
 
+        # check to see if the user is a mentor
         if user.get('is_mentor') == True:
-            return jsonify({'message': 'can not get matched for a mentor'})
+            return jsonify({'message': 'can not check if a user is matched for a mentor'})
 
+        # return this if they do not have a mentor
         if user.get('mentor') == None:
-            return jsonify({'matched': False})
-        else:
-            return jsonify({'matched': True})
+            return jsonify({'matched': False, "mentor": None})
+
+        # get the matched mentor
+        mentor_id = {'_id': ObjectId(user.get('mentor'))}
+        mentor = oracli_api.users.find_one(mentor_id)
+
+        # return that they are matched and the person that they are matched with
+        return jsonify({'matched': True, 'mentor': json.loads(json_util.dumps(mentor))})

@@ -11,7 +11,7 @@ from oracli_api.controllers.register import Register
 from oracli_api.controllers.test import Test
 from oracli_api.controllers.user import User, Matched
 from oracli_api.controllers.mentees import Mentees
-from oracli_api.controllers.mentors import Mentors
+from oracli_api.controllers.mentors import Mentors, AddMentee, RemoveMentee
 
 # load environment variables
 load_dotenv()
@@ -48,5 +48,9 @@ api.add_resource(User, '/user')
 api.add_resource(Matched, '/user/matched')
 # mentors route
 api.add_resource(Mentors, '/mentors')
+# add a mentee to a mentor
+api.add_resource(AddMentee, '/mentors/add/<string:mentee_id>')
+# remove a mentee from a mentor
+api.add_resource(RemoveMentee, '/mentors/remove/<string:mentee_id>')
 # mentees route
 api.add_resource(Mentees, '/mentees')
