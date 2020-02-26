@@ -11,13 +11,14 @@ import UIKit
 
 func createUser(user: User) -> String {
     var token: String = ""
-    let url = URL(string: "https://oracli.dev.benlafferty.me/register")!
-    var request = URLRequest(url: url)
-    request.httpMethod = "POST"
+    let url = URL(string: "https://oracli.dev.benlafferty.me/register")!    //flask api url
+    var request = URLRequest(url: url)  //creating url request
+    request.httpMethod = "POST"         //determines the type of url request
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
+    //attempts to encode the user data to JSON, throws an error into an optional if unsuccessful and ends the function
     guard let uploadData = try? JSONEncoder().encode(user) else { return "Can't encode user as JSON" }
-
+    //sends the post request to server and gets back error and server response
     let task = URLSession.shared.uploadTask(with: request, from: uploadData) { data, response, error in
         if let error = error {
             print ("error: \(error)")
@@ -33,6 +34,7 @@ func createUser(user: User) -> String {
         if let mimeType = response.mimeType,
             mimeType == "application/json",
             let data = data {
+            //extracts the data andconvertsittojson
             guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
             if let dictionary = json as? [String:String] {
                 if let value = dictionary["token"] {
@@ -47,23 +49,28 @@ func createUser(user: User) -> String {
 }
 
 func login(login: Login) -> String {
-    var returnValue: String = "1"
-    let url = URL(string: "https://oracli.dev.benlafferty.me/login")!
-    var request = URLRequest(url: url)
-    request.httpMethod = "POST"
+    var returnValue: String = "1"   //should hold the token by the end
+    let url = URL(string: "https://oracli.dev.benlafferty.me/login")!   //flask api url
+    var request = URLRequest(url: url)      //create url request
+    request.httpMethod = "POST"             //set url request type
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
+    //attempts to convert login info to json, throws an error and ends if  unsuccessful
     guard let loginData = try? JSONEncoder().encode(login) else { return "can't encode login" }
+    //sends the post request to server and gets back error and server response
     let task = URLSession.shared.uploadTask(with: request, from: loginData) { data, response, error in
         if let error = error {
             print ("error: \(error)")
-            return
+            return 
         }
+        //checks server for correct server response code, throws an error and ends if incorrect one is received
         guard let response = response as? HTTPURLResponse,
             (200...299).contains(response.statusCode) else {
             print ("server error")
             return
         }
+        returnValue = "2"
+        //handles data you recieve from the server
         if let mimeType = response.mimeType,
             mimeType == "application/json",
             let data = data {
