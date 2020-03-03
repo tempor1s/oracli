@@ -25,6 +25,24 @@ class SignUpViewController: UIViewController {
         
         self.title = "Register"
         self.navigationItem.leftBarButtonItem?.title = ""
+        
+        self.nameTextField.layer.borderWidth = 1.0;
+        self.nameTextField.layer.borderColor = UIColor.black.cgColor
+        
+        self.ageTextField.layer.borderWidth = 1.0;
+        self.ageTextField.layer.borderColor = UIColor.black.cgColor
+        
+        self.genderTextField.layer.borderWidth = 1.0;
+        self.genderTextField.layer.borderColor = UIColor.black.cgColor
+        
+        self.emailTextField.layer.borderWidth = 1.0;
+        self.emailTextField.layer.borderColor = UIColor.black.cgColor
+        
+        self.passwordTextField.layer.borderWidth = 1.0;
+        self.passwordTextField.layer.borderColor = UIColor.black.cgColor
+        
+        self.confirmPasswordTextField.layer.borderWidth = 1.0;
+        self.confirmPasswordTextField.layer.borderColor = UIColor.black.cgColor
     }
     
     @IBAction func signUpButtonTapped(_ sender: Any) {

@@ -23,6 +23,15 @@ class MentorSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.aboutTextView.layer.borderWidth = 1.0;
+        self.aboutTextView.layer.borderColor = UIColor.black.cgColor
+        
+        self.jobExperienceTextView.layer.borderWidth = 1.0;
+        self.jobExperienceTextView.layer.borderColor = UIColor.black.cgColor
+        
+        self.skillsTextView.layer.borderWidth = 1.0;
+        self.skillsTextView.layer.borderColor = UIColor.black.cgColor
+        
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {

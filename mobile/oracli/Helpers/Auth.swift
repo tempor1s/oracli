@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//creates new mentor or mentee
 func createUser(user: User) -> String {
     var token: String = ""
     let url = URL(string: "https://oracli.dev.benlafferty.me/register")!    //flask api url
@@ -34,7 +35,7 @@ func createUser(user: User) -> String {
         if let mimeType = response.mimeType,
             mimeType == "application/json",
             let data = data {
-            //extracts the data andconvertsittojson
+            //extracts the data and converts it to json
             guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else { return }
             if let dictionary = json as? [String:String] {
                 if let value = dictionary["token"] {
@@ -48,8 +49,9 @@ func createUser(user: User) -> String {
     return token
 }
 
+//logs user i
 func login(login: Login) -> String {
-    var returnValue: String = "1"   //should hold the token by the end
+    var returnValue: String = "1"   //should hold the account token by the end
     let url = URL(string: "https://oracli.dev.benlafferty.me/login")!   //flask api url
     var request = URLRequest(url: url)      //create url request
     request.httpMethod = "POST"             //set url request type
@@ -69,22 +71,28 @@ func login(login: Login) -> String {
             print ("server error")
             return
         }
-        returnValue = "2"
+
         //handles data you recieve from the server
         if let mimeType = response.mimeType,
             mimeType == "application/json",
             let data = data {
+            //extracts the data and converts it to json
             guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
                 returnValue = "couldn't serialize json"
+                print("couldn't serialize json")
                 return
             }
             if let dictionary = json as? [String:String] {
+                print("failed getting dictionary")
                 if let message = dictionary["message"] {
+                    print("failed in data retrieval")
                     returnValue = message
                 } else {
+                    print("failed the error catcher")
                     returnValue = "it worked dumb bitch"
                 }
             }
+            print(returnValue)
         }
     }
     task.resume()

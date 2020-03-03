@@ -24,6 +24,15 @@ class MenteeSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.aboutTextView.layer.borderWidth = 1.0;
+        self.aboutTextView.layer.borderColor = UIColor.black.cgColor
+        
+        self.whyMentorTextView.layer.borderWidth = 1.0;
+        self.whyMentorTextView.layer.borderColor = UIColor.black.cgColor
+        
+        self.interestsTextField.layer.borderWidth = 1.0;
+        self.interestsTextField.layer.borderColor = UIColor.black.cgColor
+        
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
