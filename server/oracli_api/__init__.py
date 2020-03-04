@@ -32,7 +32,7 @@ try:
 except Exception as e:
     print(e)
 
-# Home Route - TODO: Add homepage here
+# Home Route - Just the basic landing page
 api.add_resource(HelloRoute, '/')
 
 # Authentication Routes
