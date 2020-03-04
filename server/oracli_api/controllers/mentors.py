@@ -12,7 +12,7 @@ class Mentors(Resource):
     @token_required
     def get(self, data, token):
         # get all mentors from db and return them
-        mentors = list(oracli_api.users.find({"is_mentor": True}))
+        mentors = list(oracli_api.users.find({"is_mentor": True}, {"password": 0}))
         return jsonify(json.loads(json_util.dumps(mentors)))
 
 

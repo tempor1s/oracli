@@ -10,7 +10,7 @@ from oracli_api.controllers.login import Login
 from oracli_api.controllers.register import Register
 from oracli_api.controllers.test import Test
 from oracli_api.controllers.user import User, Matched
-from oracli_api.controllers.mentees import Mentees
+from oracli_api.controllers.mentees import Mentees, UnmatchedMentees
 from oracli_api.controllers.mentors import Mentors, AddMentee, RemoveMentee
 
 # load environment variables
@@ -54,3 +54,5 @@ api.add_resource(AddMentee, '/mentors/add/<string:mentee_id>')
 api.add_resource(RemoveMentee, '/mentors/remove/<string:mentee_id>')
 # mentees route
 api.add_resource(Mentees, '/mentees')
+# get all mentees that do not have a match
+api.add_resource(UnmatchedMentees, '/mentees/unmatched')
