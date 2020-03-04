@@ -63,9 +63,11 @@ class LoginViewController: UIViewController {
             // transition to next storyboard
             print(message)
             
-            let mentorVC = MentorProfileViewController()
-            let menteeVC = MenteeProfileViewController()
-
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mentorVC = storyboard.instantiateViewController(withIdentifier: "MentorProfileVC") as! MentorProfileViewController
+            let menteeVC = storyboard.instantiateViewController(withIdentifier: "MenteeProfileVC") as! MenteeProfileViewController
+                                        
+            loading = true
             
             fetchUser(token: message, completionHandler: { isMentor, jsonUser, error in
                 if let error = error {
@@ -82,6 +84,10 @@ class LoginViewController: UIViewController {
                 }
                 loading = false
             })
+            
+            while loading {
+                print("loading")
+            }
             
             guard let _ = menteeVC.mentee else {
                 self.navigationController?.pushViewController(mentorVC, animated: true)

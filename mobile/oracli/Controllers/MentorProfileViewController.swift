@@ -15,6 +15,6 @@ class MentorProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(mentor)
+        print("Mentor: \(String(describing: mentor))")
     }
 }

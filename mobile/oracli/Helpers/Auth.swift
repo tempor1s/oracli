@@ -79,12 +79,10 @@ func login(login: Login, completionHandler: @escaping (String) -> Void) {
                 return
             }
             if let dictionary = json as? [String:String] {
-                print("failed getting dictionary")
                 if let message = dictionary["message"] {
                     completionHandler(message)
                 } else {
                     completionHandler(dictionary["token"]!)
-
                 }
             }
         }
