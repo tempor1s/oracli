@@ -12,6 +12,8 @@ import UIKit
 class MentorSignUpViewController: UIViewController {
     
     var token: String?
+    var name: String?
+    var age: String?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -23,22 +25,43 @@ class MentorSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.aboutTextView.layer.borderWidth = 1.0;
-        self.aboutTextView.layer.borderColor = UIColor.black.cgColor
+        if let name = name, let age = age {
+            nameLabel.text = name
+            ageLabel.text = age
+        }
         
+        aboutTextView.clipsToBounds = true
+        self.aboutTextView.layer.borderWidth = 1.0
+        self.aboutTextView.layer.borderColor = UIColor.black.cgColor
+        aboutTextView.layer.cornerRadius = 5.0
+        
+        jobExperienceTextView.clipsToBounds = true
+        jobExperienceTextView.layer.cornerRadius = 5.0
         self.jobExperienceTextView.layer.borderWidth = 1.0;
         self.jobExperienceTextView.layer.borderColor = UIColor.black.cgColor
         
+        skillsTextView.clipsToBounds = true
+        skillsTextView.layer.cornerRadius = 5.0
         self.skillsTextView.layer.borderWidth = 1.0;
         self.skillsTextView.layer.borderColor = UIColor.black.cgColor
         
     }
     
-    @IBAction func saveButtonTapped(_ sender: Any) {
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let nc = self.navigationController {
-            let nextVC = storyboard.instantiateViewController(withIdentifier: "MenteeListTVC") as! MenteeTableViewController
-            nc.pushViewController(nextVC, animated: true)
+        var loading: Bool = true
+        
+        availableMentees(token: self.token!, completionHandler: { menteesList, error in
+            print("got mentees")
+            loading = false
+        })
+        
+        while loading {
+            print("loading")
         }
+        
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "MenteeListTVC") as! MenteeTableViewController
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
     }
 }

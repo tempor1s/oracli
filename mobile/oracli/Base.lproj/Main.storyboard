@@ -261,7 +261,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="lwz-YI-lGT" eventType="touchUpInside" id="5me-WD-Wrg"/>
@@ -457,7 +457,7 @@
                                 <rect key="frame" x="0.0" y="810" width="414" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="gMe-2m-9jG" eventType="touchUpInside" id="m7F-jo-auo"/>
@@ -571,12 +571,12 @@
             <objects>
                 <tableViewController storyboardIdentifier="MenteeListTVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wdL-IQ-mAn" customClass="MenteeTableViewController" customModule="oracli" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LQK-Cl-HEE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenteeCell" rowHeight="150" id="ELd-nX-eRC" customClass="MenteeTableViewCell" customModule="oracli" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="MenteeCell" rowHeight="150" id="ELd-nX-eRC" customClass="MenteeTableViewCell" customModule="oracli" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ELd-nX-eRC" id="mNE-6r-MH0">
@@ -594,6 +594,7 @@
                             <outlet property="delegate" destination="wdL-IQ-mAn" id="0jG-0r-0nj"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="idS-nH-aRH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e69-c6-8as" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -617,13 +618,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="xpT-yi-xxG">
                                 <rect key="frame" x="180" y="30" width="214" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asp-us-0SN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Amanda R." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asp-us-0SN">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsR-Xs-2Md">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsR-Xs-2Md">
                                         <rect key="frame" x="0.0" y="49" width="214" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
@@ -638,14 +639,14 @@
                                 <rect key="frame" x="0.0" y="769" width="414" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Select mentee">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="selectMenteeTapped:" destination="NPT-98-3EM" eventType="touchUpInside" id="a3v-B3-czO"/>
                                     <action selector="selectMenteeTapped:" destination="1XS-gH-MqE" eventType="touchUpInside" id="xUf-7I-6zC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Areas of interest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-25-Lvs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS development, Objective-C, Swift, UX, business &amp; marketing, customer relationship management, agile development" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5G-25-Lvs">
                                 <rect key="frame" x="20" y="550" width="374" height="130"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -655,7 +656,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why they want a mentor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bET-rd-Uan">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have a lot of different interests in the field so I want a mentor who can help me understand what to focus on." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bET-rd-Uan">
                                 <rect key="frame" x="20" y="380" width="374" height="130"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -665,7 +666,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsy-zp-ef4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm a second year college student majoring in computer science. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsy-zp-ef4">
                                 <rect key="frame" x="20" y="210" width="374" height="130"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -886,9 +887,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJR-8T-hPL">
+                                <rect key="frame" x="15" y="761" width="384" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sy9-qP-L9y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Select Mentee"/>
+                                <connections>
+                                    <segue destination="wdL-IQ-mAn" kind="show" id="JpU-uL-v7c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lJR-8T-hPL" firstAttribute="leading" secondItem="5Ay-Pv-V44" secondAttribute="leading" constant="15" id="00Q-Gv-C7g"/>
                             <constraint firstItem="NMh-q6-9h0" firstAttribute="leading" secondItem="5Ay-Pv-V44" secondAttribute="leading" constant="20" id="0NU-E6-hGY"/>
                             <constraint firstItem="k6N-bY-ccK" firstAttribute="top" secondItem="X3a-ll-IjL" secondAttribute="bottom" constant="40" id="1N2-ke-J7x"/>
                             <constraint firstItem="X3a-ll-IjL" firstAttribute="top" secondItem="igx-4o-7Zn" secondAttribute="bottom" constant="40" id="6vu-OW-mlR"/>
@@ -896,9 +909,11 @@
                             <constraint firstItem="5Ay-Pv-V44" firstAttribute="trailing" secondItem="k6N-bY-ccK" secondAttribute="trailing" constant="20" id="8XO-RE-a5B"/>
                             <constraint firstItem="NMh-q6-9h0" firstAttribute="top" secondItem="5Ay-Pv-V44" secondAttribute="top" constant="20" id="GH1-8g-kWB"/>
                             <constraint firstItem="5Ay-Pv-V44" firstAttribute="trailing" secondItem="igx-4o-7Zn" secondAttribute="trailing" constant="20" id="KEA-O9-iwO"/>
+                            <constraint firstItem="5Ay-Pv-V44" firstAttribute="bottom" secondItem="lJR-8T-hPL" secondAttribute="bottom" constant="41" id="PoS-yl-dmt"/>
                             <constraint firstItem="UcC-U1-mgS" firstAttribute="top" secondItem="5Ay-Pv-V44" secondAttribute="top" constant="30" id="QSD-2C-OuP"/>
                             <constraint firstItem="X3a-ll-IjL" firstAttribute="leading" secondItem="5Ay-Pv-V44" secondAttribute="leading" constant="20" id="XGl-VV-qrm"/>
                             <constraint firstItem="igx-4o-7Zn" firstAttribute="top" secondItem="NMh-q6-9h0" secondAttribute="bottom" constant="60" id="cSc-1B-4BW"/>
+                            <constraint firstItem="5Ay-Pv-V44" firstAttribute="trailing" secondItem="lJR-8T-hPL" secondAttribute="trailing" constant="15" id="dIn-lF-rbg"/>
                             <constraint firstItem="5Ay-Pv-V44" firstAttribute="trailing" secondItem="UcC-U1-mgS" secondAttribute="trailing" constant="20" id="ixX-0l-7YE"/>
                             <constraint firstItem="5Ay-Pv-V44" firstAttribute="trailing" secondItem="X3a-ll-IjL" secondAttribute="trailing" constant="20" id="k3F-Yk-E6c"/>
                             <constraint firstItem="k6N-bY-ccK" firstAttribute="leading" secondItem="5Ay-Pv-V44" secondAttribute="leading" constant="20" id="mbD-Sv-lgn"/>
@@ -907,6 +922,14 @@
                         <viewLayoutGuide key="safeArea" id="5Ay-Pv-V44"/>
                     </view>
                     <navigationItem key="navigationItem" id="4tB-Qm-Pct"/>
+                    <connections>
+                        <outlet property="aboutLabel" destination="igx-4o-7Zn" id="wQE-RT-cm9"/>
+                        <outlet property="ageLabel" destination="ZLE-Ld-W36" id="eJr-PJ-XRg"/>
+                        <outlet property="interestsLabel" destination="k6N-bY-ccK" id="9Ga-g9-ehi"/>
+                        <outlet property="jobExperienceLabel" destination="X3a-ll-IjL" id="aqb-fQ-8ve"/>
+                        <outlet property="nameLabel" destination="zue-X6-lmC" id="l3N-s1-3HB"/>
+                        <outlet property="selectMenteeButton" destination="lJR-8T-hPL" id="osl-D1-dkA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atC-UW-WCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

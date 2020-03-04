@@ -150,6 +150,24 @@ func fetchUser(token: String, completionHandler: @escaping (Bool?, JSONUser?, Er
     task.resume()
 }
 
-func allMentees() -> [String] {
-    return ["mentee", "mentee"]
+func availableMentees(token: String, completionHandler: @escaping ([JSONUser]?, Error?) -> Void) {
+    let url = URL(string: "https://oracli.dev.benlafferty.me/mentees/unmatched")!
+    var request = URLRequest(url: url)
+    request.httpMethod = "GET"
+    request.addValue(token, forHTTPHeaderField: "Auth")
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    
+    let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+        guard let data = data else { return }
+        do {
+          // parse json data and return it
+            let decoder = JSONDecoder()
+            let mentees = try decoder.decode([JSONUser].self, from: data)
+            completionHandler(mentees, nil)
+        } catch let parseErr {
+            print("JSON parsing error!", parseErr)
+            completionHandler(nil, parseErr)
+        }
+    })
+    task.resume()
 }

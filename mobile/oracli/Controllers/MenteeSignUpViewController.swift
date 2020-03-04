@@ -12,6 +12,8 @@ import UIKit
 class MenteeSignUpViewController: UIViewController {
     
     var token: String?
+    var name: String?
+    var age: String?
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,18 +26,30 @@ class MenteeSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.aboutTextView.layer.borderWidth = 1.0;
-        self.aboutTextView.layer.borderColor = UIColor.black.cgColor
+        if let name = name, let age = age {
+            nameLabel.text = name
+            ageLabel.text = age
+        }
         
-        self.whyMentorTextView.layer.borderWidth = 1.0;
+        aboutTextView.clipsToBounds = true
+        self.aboutTextView.layer.borderWidth = 1.0
+        self.aboutTextView.layer.borderColor = UIColor.black.cgColor
+        aboutTextView.layer.cornerRadius = 5.0
+        
+        whyMentorTextView.clipsToBounds = true
+        whyMentorTextView.layer.cornerRadius = 5.0
+        self.whyMentorTextView.layer.borderWidth = 1.0
         self.whyMentorTextView.layer.borderColor = UIColor.black.cgColor
         
-        self.interestsTextField.layer.borderWidth = 1.0;
+        interestsTextField.clipsToBounds = true
+        interestsTextField.layer.cornerRadius = 5.0
+        self.interestsTextField.layer.borderWidth = 1.0
         self.interestsTextField.layer.borderColor = UIColor.black.cgColor
         
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        // TODO: make call to server to save updated info
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //        let nextVC = storyboard.instantiateViewController(withIdentifier: "WaitingPage")
 //        self.navigationController?.pushViewController(nextVC, animated: true)

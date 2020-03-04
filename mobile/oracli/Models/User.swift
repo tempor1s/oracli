@@ -13,7 +13,7 @@ struct User:Codable {
     let name: String
     let age: Int
     let gender: String
-    let isMentor: Bool
+    let is_mentor: Bool
     let email: String
     let password: String
     

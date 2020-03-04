@@ -94,9 +94,7 @@ class LoginViewController: UIViewController {
                 return
             }
             
-            self.navigationController?.pushViewController(menteeVC, animated: true)
-
-            
+            self.navigationController?.pushViewController(menteeVC, animated: true)            
         }
     }
 }

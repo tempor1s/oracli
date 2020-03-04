@@ -11,18 +11,16 @@ import UIKit
 
 class MenteeTableViewController: UITableViewController {
 
+    var menteesList: [Mentee]?
     
     let sampleData: [(name: String, areasOfInterest: String)] = [
-        ("akfdj", "The"),
-        ("afdkj", "The quick"),
-        ("adfklj", "The quick brown"),
-        ("adfklj", "The quick brown fox"),
-        ("adfklj", "The quick brown fox jumps The quick brown fox jumps over the lazy dog apostrophe-never-again"),
-        ("adfklj", "The quick brown fox jumps over"),
-        ("adfklj", "The quick brown fox jumps over the"),
-        ("adfklj", "The quick brown fox jumps over the lazy"),
-        ("adfklj", "The quick brown fox jumps over the lazy dog"),
-        ("adfklj", "The quick brown fox jumps over the lazy dog apostrophe-never-again")
+        ("Hannah M.", "UI/UX, agile development"),
+        ("Fred W.", "Data science, machine learning"),
+        ("Sterling B.", "RESTful APIs, Django, Go"),
+        ("Amanda R.", "iOS development, Objective-C, Swift, UX, business & marketing, customer relationship management, agile development"),
+        ("Caitlyn A.", "Django, machine learning, RESTful APIs, data science, Go"),
+        ("Eric F.", "Human-Computer Interaction, web development, bots, UI/UX"),
+        ("Jackie T.", "Product Management, virtual & augmented reality (VR/AR), machine learning")
     ]
     
     override func viewDidLoad() {
