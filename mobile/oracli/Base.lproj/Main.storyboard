@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bBe-cY-4Fc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bBe-cY-4Fc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -141,18 +141,20 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrp-mu-Edc">
                                 <rect key="frame" x="0.0" y="802" width="414" height="60"/>
-                                <color key="backgroundColor" red="0.86600440861609984" green="0.86600440861609984" blue="0.86600440861609984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ecn-iM-Poz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpButtonTapped:" destination="RbO-TN-Jkv" eventType="touchUpInside" id="Abg-5V-sAH"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kaR-IX-d5e" firstAttribute="top" secondItem="MnL-Fg-RiK" secondAttribute="top" id="5C4-pj-CgN"/>
                             <constraint firstItem="MnL-Fg-RiK" firstAttribute="bottom" secondItem="Nrp-mu-Edc" secondAttribute="bottom" id="D98-Fo-3PI"/>
@@ -210,13 +212,15 @@
                                     <constraint firstAttribute="height" constant="40" id="GkX-w9-bea"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="y5N-ff-ER6" eventType="touchUpInside" id="FoC-Sv-hQ3"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cKs-n7-t0T" firstAttribute="leading" secondItem="ctb-tm-9Us" secondAttribute="leading" constant="30" id="C58-KH-MuO"/>
                             <constraint firstItem="Mzo-ef-SIg" firstAttribute="leading" secondItem="ctb-tm-9Us" secondAttribute="leading" constant="30" id="O5l-Ol-HFp"/>
@@ -254,8 +258,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9c-6s-Y4u">
                                 <rect key="frame" x="0.0" y="823" width="414" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="lwz-YI-lGT" eventType="touchUpInside" id="5me-WD-Wrg"/>
                                     <segue destination="jcg-KK-oGj" kind="showDetail" id="7fU-DW-Zod"/>
@@ -322,7 +329,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fG6-Gb-l1R" firstAttribute="leading" secondItem="mee-WR-qBy" secondAttribute="leading" constant="20" id="2Xe-Sc-caE"/>
                             <constraint firstItem="mee-WR-qBy" firstAttribute="trailing" secondItem="wzY-Jq-Z79" secondAttribute="trailing" constant="20" id="5rE-Gd-TYi"/>
@@ -393,7 +400,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XPI-DD-l8F" firstAttribute="top" secondItem="NDR-B9-j52" secondAttribute="bottom" constant="10" id="ASs-XP-XPc"/>
                             <constraint firstItem="XPI-DD-l8F" firstAttribute="leading" secondItem="1Mf-pS-cfI" secondAttribute="leading" constant="40" id="AUC-x2-oWP"/>
@@ -449,7 +456,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRt-cg-2tD">
                                 <rect key="frame" x="0.0" y="810" width="414" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="gMe-2m-9jG" eventType="touchUpInside" id="m7F-jo-auo"/>
                                 </connections>
@@ -512,7 +521,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gRt-cg-2tD" firstAttribute="top" secondItem="B1v-eN-s6D" secondAttribute="bottom" constant="30" id="118-kL-ow1"/>
                             <constraint firstItem="B6L-lc-4ZU" firstAttribute="top" secondItem="fB1-7j-93L" secondAttribute="bottom" constant="40" id="8i5-sv-6ta"/>
@@ -564,7 +573,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LQK-Cl-HEE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenteeCell" rowHeight="150" id="ELd-nX-eRC" customClass="MenteeTableViewCell" customModule="oracli" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
@@ -573,6 +583,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="NPT-98-3EM" kind="showDetail" identifier="toMenteeDetailVC" id="xx6-2F-Amy"/>
                                 </connections>
@@ -626,7 +637,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9My-Ah-g2N">
                                 <rect key="frame" x="0.0" y="769" width="414" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Select mentee"/>
+                                <state key="normal" title="Select mentee">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="selectMenteeTapped:" destination="NPT-98-3EM" eventType="touchUpInside" id="a3v-B3-czO"/>
                                     <action selector="selectMenteeTapped:" destination="1XS-gH-MqE" eventType="touchUpInside" id="xUf-7I-6zC"/>
@@ -663,7 +676,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qsy-zp-ef4" firstAttribute="leading" secondItem="32D-ad-4hs" secondAttribute="leading" constant="20" id="EDR-6M-p8c"/>
                             <constraint firstItem="Q5G-25-Lvs" firstAttribute="leading" secondItem="32D-ad-4hs" secondAttribute="leading" constant="20" id="Eud-PX-KbI"/>
@@ -776,7 +789,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="aMb-Ff-HgF" firstAttribute="top" secondItem="rgU-F5-8fe" secondAttribute="bottom" constant="60" id="3lE-Fs-CIu"/>
                             <constraint firstItem="s1k-Dl-kKS" firstAttribute="leading" secondItem="6cd-xp-Hlh" secondAttribute="leading" constant="20" id="4UB-fC-S66"/>

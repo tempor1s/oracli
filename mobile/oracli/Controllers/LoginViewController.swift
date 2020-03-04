@@ -28,7 +28,17 @@ class LoginViewController: UIViewController {
             errorLabel.heightAnchor.constraint(equalTo: passwordTextField.heightAnchor)
         ])
     }
-    
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.emailTextField.layer.borderWidth = 1.0;
+        self.emailTextField.layer.borderColor = UIColor.black.cgColor
+        
+        self.passwordTextField.layer.borderWidth = 1.0;
+        self.passwordTextField.layer.borderColor = UIColor.black.cgColor
+    }
+
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
