@@ -44,14 +44,13 @@ func createUser(user: User) -> String {
     return token
 }
 
-func login(login: Login) -> String {
-    var returnValue: String = "1"
+func login(login: Login, completionHandler: @escaping (String) -> Void) {
     let url = URL(string: "https://oracli.dev.benlafferty.me/login")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
-    guard let loginData = try? JSONEncoder().encode(login) else { return "can't encode login" }
+    guard let loginData = try? JSONEncoder().encode(login) else { return }
     let task = URLSession.shared.uploadTask(with: request, from: loginData) { data, response, error in
         if let error = error {
             print ("error: \(error)")
@@ -66,20 +65,19 @@ func login(login: Login) -> String {
             mimeType == "application/json",
             let data = data {
             guard let json = try? JSONSerialization.jsonObject(with: data, options: []) else {
-                returnValue = "couldn't serialize json"
+                completionHandler("couldn't serialize json")
                 return
             }
             if let dictionary = json as? [String:String] {
                 if let message = dictionary["message"] {
-                    returnValue = message
+                    completionHandler(message)
                 } else {
-                    returnValue = "it worked dumb bitch"
+                    completionHandler(dictionary["token"]!)
                 }
             }
         }
     }
     task.resume()
-    return returnValue
 }
 
 //func updateUser(update: Update) {
@@ -115,8 +113,31 @@ func login(login: Login) -> String {
 //    task.resume()
 //}
 
-func getUser(token: String) -> String {
-     return "User"
+func fetchUser(token: String, completionHandler: @escaping (Bool?, JSONUser?, Error?) -> Void) {
+    let url = URL(string: "https://oracli.dev.benlafferty.me/user")!
+    var request = URLRequest(url: url)
+    request.httpMethod = "GET"
+    request.addValue(token, forHTTPHeaderField: "Auth")
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    
+    let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+        guard let data = data else { return }
+        do {
+          // parse json data and return it
+            let decoder = JSONDecoder()
+            let jsonUser = try decoder.decode(JSONUser.self, from: data)
+            print(jsonUser)
+            if jsonUser.is_mentor {
+                completionHandler(true, jsonUser, nil)
+            } else {
+                completionHandler(false, jsonUser, nil)
+            }
+        } catch let parseErr {
+          print("JSON parsing error!", parseErr)
+          completionHandler(nil, nil, parseErr)
+        }
+    })
+    task.resume()
 }
 
 func allMentees() -> [String] {

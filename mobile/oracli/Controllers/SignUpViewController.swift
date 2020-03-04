@@ -49,12 +49,15 @@ class SignUpViewController: UIViewController {
         if password == confirmedPassword {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if mentorSegmentedControl.selectedSegmentIndex == 0 {
-                let mentee: User = User(name: name, age: Int(age)!, gender: gender, isMentor: false, email: email, password: password)
+                let mentee: User = User(name: name, age: Int(age)!, gender: gender,
+                                        isMentor: false, email: email, password: password)
                 let nextVC = storyboard.instantiateViewController(withIdentifier: "MenteeSignUpVC") as! MenteeSignUpViewController
                 nextVC.token = createUser(user: mentee)
+                print("token: \(nextVC.token!)")
                 self.navigationController?.pushViewController(nextVC, animated: true)
             } else {
-                let mentor: User = User(name: name, age: Int(age)!, gender: gender, isMentor: true, email: email, password: password)
+                let mentor: User = User(name: name, age: Int(age)!, gender: gender,
+                                        isMentor: true, email: email, password: password)
                 let nextVC = storyboard.instantiateViewController(withIdentifier: "MentorSignUpVC") as! MentorSignUpViewController
                 nextVC.token = createUser(user: mentor)
                 self.navigationController?.pushViewController(nextVC, animated: true)

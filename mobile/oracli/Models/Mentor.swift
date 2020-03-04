@@ -13,9 +13,11 @@ struct Mentor:Codable {
     let name: String
     let age: Int
     let gender: String
-    let about: String
-    let jobExperience: String
-    let areasOfInterest: String
-    let token: String
+    let email: String
+    
+    let about: String?
+    let jobExperience: String?
+    let areasOfInterest: String?
+    let token: String?
     
 }

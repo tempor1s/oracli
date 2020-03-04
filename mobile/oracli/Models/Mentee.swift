@@ -13,10 +13,11 @@ struct Mentee:Codable {
     let name: String
     let age: Int
     let gender: String
-    let areasOfInterest: String
-    let whyMentor: String
-    let about: String
-    let matched: Bool
-    let token: String
- 
+    let email: String
+    
+    let token: String?
+    let interests: String?
+    let whyMentor: String?
+    let about: String?
+    let mentor: Mentor?
 }
