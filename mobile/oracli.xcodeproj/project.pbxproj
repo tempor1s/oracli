@@ -16,6 +16,19 @@
 		CF13E16D23E9FA7200750677 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E16C23E9FA7200750677 /* SignUpViewController.swift */; };
 		CF13E16F23E9FD0200750677 /* MenteeSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */; };
 		CF13E17123E9FDB900750677 /* MentorSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */; };
+		CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17223EB675E00750677 /* MenteeTableViewController.swift */; };
+		CF13E17523EB6BA700750677 /* MenteeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */; };
+		CF13E17823EE74BE00750677 /* Mentee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17723EE74BE00750677 /* Mentee.swift */; };
+		CF13E17B23EE814B00750677 /* Mentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF13E17A23EE814B00750677 /* Mentor.swift */; };
+		CF1A949423F89B37000E9EA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A949323F89B37000E9EA8 /* User.swift */; };
+		CF1A949723FB226E000E9EA8 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1A949623FB226E000E9EA8 /* Auth.swift */; };
+		CF47E2B1240F856D00D5A06D /* MenteeProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47E2B0240F856D00D5A06D /* MenteeProfileViewController.swift */; };
+		CF47E2B3240F858300D5A06D /* MentorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47E2B2240F858300D5A06D /* MentorProfileViewController.swift */; };
+		CF4ECB2923F1E52F0087627B /* MenteeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */; };
+		CF4ECB2B23F1E5D10087627B /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */; };
+		CF625B2B240336EE006D281D /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF625B2A240336EE006D281D /* Codable.swift */; };
+		CF625B2D24033FC7006D281D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF625B2C24033FC7006D281D /* LoginViewController.swift */; };
+		CF625B7E240F786C006D281D /* JSONUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF625B7D240F786A006D281D /* JSONUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +43,19 @@
 		CF13E16C23E9FA7200750677 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeSignUpViewController.swift; sourceTree = "<group>"; };
 		CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorSignUpViewController.swift; sourceTree = "<group>"; };
+		CF13E17223EB675E00750677 /* MenteeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeTableViewController.swift; sourceTree = "<group>"; };
+		CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeTableViewCell.swift; sourceTree = "<group>"; };
+		CF13E17723EE74BE00750677 /* Mentee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentee.swift; sourceTree = "<group>"; };
+		CF13E17A23EE814B00750677 /* Mentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mentor.swift; sourceTree = "<group>"; };
+		CF1A949323F89B37000E9EA8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CF1A949623FB226E000E9EA8 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		CF47E2B0240F856D00D5A06D /* MenteeProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeProfileViewController.swift; sourceTree = "<group>"; };
+		CF47E2B2240F858300D5A06D /* MentorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorProfileViewController.swift; sourceTree = "<group>"; };
+		CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenteeDetailViewController.swift; sourceTree = "<group>"; };
+		CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
+		CF625B2A240336EE006D281D /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		CF625B2C24033FC7006D281D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CF625B7D240F786A006D281D /* JSONUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +88,8 @@
 		CF13E15423E91A7D00750677 /* oracli */ = {
 			isa = PBXGroup;
 			children = (
+				CF1A949523FB223D000E9EA8 /* Helpers */,
+				CF13E17923EE812B00750677 /* Models */,
 				CF13E16B23E9FA4D00750677 /* Views */,
 				CF13E16A23E9FA4400750677 /* Controllers */,
 				CF13E15523E91A7D00750677 /* AppDelegate.swift */,
@@ -81,6 +109,12 @@
 				CF13E16C23E9FA7200750677 /* SignUpViewController.swift */,
 				CF13E16E23E9FD0200750677 /* MenteeSignUpViewController.swift */,
 				CF13E17023E9FDB900750677 /* MentorSignUpViewController.swift */,
+				CF13E17223EB675E00750677 /* MenteeTableViewController.swift */,
+				CF4ECB2823F1E52F0087627B /* MenteeDetailViewController.swift */,
+				CF4ECB2A23F1E5D10087627B /* WaitingViewController.swift */,
+				CF625B2C24033FC7006D281D /* LoginViewController.swift */,
+				CF47E2B0240F856D00D5A06D /* MenteeProfileViewController.swift */,
+				CF47E2B2240F858300D5A06D /* MentorProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -88,8 +122,29 @@
 		CF13E16B23E9FA4D00750677 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF13E17423EB6BA700750677 /* MenteeTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CF13E17923EE812B00750677 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF13E17723EE74BE00750677 /* Mentee.swift */,
+				CF13E17A23EE814B00750677 /* Mentor.swift */,
+				CF1A949323F89B37000E9EA8 /* User.swift */,
+				CF625B2A240336EE006D281D /* Codable.swift */,
+				CF625B7D240F786A006D281D /* JSONUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF1A949523FB223D000E9EA8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A949623FB226E000E9EA8 /* Auth.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,12 +218,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1A949423F89B37000E9EA8 /* User.swift in Sources */,
+				CF625B7E240F786C006D281D /* JSONUser.swift in Sources */,
 				CF13E17123E9FDB900750677 /* MentorSignUpViewController.swift in Sources */,
 				CF13E15A23E91A7D00750677 /* ViewController.swift in Sources */,
+				CF47E2B1240F856D00D5A06D /* MenteeProfileViewController.swift in Sources */,
+				CF13E17823EE74BE00750677 /* Mentee.swift in Sources */,
 				CF13E16F23E9FD0200750677 /* MenteeSignUpViewController.swift in Sources */,
+				CF13E17B23EE814B00750677 /* Mentor.swift in Sources */,
 				CF13E15623E91A7D00750677 /* AppDelegate.swift in Sources */,
 				CF13E16D23E9FA7200750677 /* SignUpViewController.swift in Sources */,
+				CF625B2B240336EE006D281D /* Codable.swift in Sources */,
+				CF13E17523EB6BA700750677 /* MenteeTableViewCell.swift in Sources */,
+				CF4ECB2B23F1E5D10087627B /* WaitingViewController.swift in Sources */,
+				CF13E17323EB675E00750677 /* MenteeTableViewController.swift in Sources */,
+				CF625B2D24033FC7006D281D /* LoginViewController.swift in Sources */,
+				CF47E2B3240F858300D5A06D /* MentorProfileViewController.swift in Sources */,
+				CF1A949723FB226E000E9EA8 /* Auth.swift in Sources */,
 				CF13E15823E91A7D00750677 /* SceneDelegate.swift in Sources */,
+				CF4ECB2923F1E52F0087627B /* MenteeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXYM5H2DXG;
 				INFOPLIST_FILE = oracli/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXYM5H2DXG;
 				INFOPLIST_FILE = oracli/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

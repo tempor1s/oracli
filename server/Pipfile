@@ -11,6 +11,8 @@ flask = "*"
 flask-restful = "*"
 pymongo = "*"
 python-dotenv = "*"
+bcrypt = "*"
+pyjwt = "*"
 gunicorn = "*"
 
 [requires]
